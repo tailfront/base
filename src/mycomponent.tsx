@@ -1,5 +1,5 @@
 /**
- * @file Copybox is a wrapper to copy associated value to clipboard.
+ * @file Copybox is a wrapper to copy associated value to clipboard.1
  * @example
  * ```tsx
  * import {Copybox} from '@/components/copybox';
