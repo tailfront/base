@@ -8,31 +8,8 @@
  * ```
  */
 
-import React from 'react';
-import {toClipboard} from '@/lib/utils';
-import {toast} from '@/components/use-toast';
-
-interface CopyboxProps {
-  value: string;
-  children: React.ReactElement;
-}
-
-const Copybox = ({value, children}: CopyboxProps): JSX.Element => {
-  return (
-    <span
-      className="cursor-pointer"
-      onClick={() => {
-        toClipboard(value);
-        toast({
-          title: 'Скопировано в буфер обмена',
-          description: value,
-        });
-      }}
-    >
-      {children}
-    </span>
-  );
+const Copybox = (): string => {
+  return 'Hi';
 };
 
-export type {CopyboxProps};
 export {Copybox};
