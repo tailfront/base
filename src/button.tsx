@@ -15,7 +15,7 @@
  * @require --save-dev @types/react
  * @require class-variance-authority
  * @require @radix-ui/react-slot
- * @require clsx@2.0.0
+ * @require clsx
  * @require tailwind-merge
  */
 
