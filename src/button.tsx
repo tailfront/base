@@ -2,14 +2,14 @@
  * @file button.tsx
  * @overview Some test description
  * @example
-```js
-...fake example
-import { Button } from "@/components/ui/button"
- 
-export function ButtonDemo() {
-  return <Button>Button</Button>
-}
-```
+
+  ...fake example
+  import { Button } from "@/components/ui/button"
+   
+  export function ButtonDemo() {
+    return <Button>Button</Button>
+  }
+
  * @require react
  * @require @radix-ui/react-slot
  * @require clsx
