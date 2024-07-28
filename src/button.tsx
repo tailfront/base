@@ -1,6 +1,7 @@
 /**
  * @file button.tsx
  * @overview Some test description
+ * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
 
   ...fake example
@@ -11,10 +12,11 @@
   }
 
  * @require react
+ * @require --save-dev @types/react
+ * @require class-variance-authority
  * @require @radix-ui/react-slot
  * @require clsx
  * @require tailwind-merge
- * @license https://github.com/tailfront/elements/blob/main/LICENSE
  */
 
 import * as React from "react"
