@@ -12,11 +12,11 @@
   }
 
  * @require react
+ * @require --save-dev @types/react
  * @require class-variance-authority
  * @require @radix-ui/react-slot
- * @require clsx
+ * @require clsx@4.1.0
  * @require tailwind-merge
- * @require --save-dev @types/react
  */
 
 import * as React from "react"
