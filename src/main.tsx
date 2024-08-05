@@ -1,15 +1,17 @@
 /**
  * @file main.tsx
  */
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import '../config/themes/base/lib';
 import { Navigation } from '@/examples/_components.tsx';
 import { AccordionExample } from '@/examples/accordion.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '../config/themes/base/lib';
+import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { AvatarExample } from './examples/avatar';
+import { BadgeExample } from './examples/badge';
+import { ProgressExample } from './examples/progress';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,18 @@ const router = createBrowserRouter([
   {
     path: '/accordion',
     element: <AccordionExample />,
+  },
+  {
+    path: '/avatar',
+    element: <AvatarExample />,
+  },
+  {
+    path: '/progress',
+    element: <ProgressExample />,
+  },
+  {
+    path: '/badge',
+    element: <BadgeExample />,
   },
 ]);
 
