@@ -3,6 +3,9 @@
  * @overview Displays a badge or a component that looks like a badge.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+ * import { Badge } from '@/components/badge';
+ *
+ * <Badge variant="default">Badge</Badge>
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -15,14 +18,15 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const badgeVariants = cva(
-  'inline-flex items-center h-5 w-[53px] text-sm rounded-full px-2 py-0.5 text-xs font-medium font-sans transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ',
+  'inline-flex items-center px-2 py-0.5 text-xs font-medium transition-colors rounded-lg',
   {
     variants: {
       variant: {
-        default: 'bg-accent-800 text-type-50 font-medium rounded-lg squircle',
-        secondary: 'bg-container-100 text-type-950 rounded-lg',
-        outline: 'bg-container-50 border border-stroke-200',
-        destructive: 'bg-red-800 rounded-lg text-type-50 ',
+        default: 'bg-accent-800 text-type-50',
+        secondary: 'bg-container-100 text-type-950',
+        outline:
+          'bg-container-50 border border-stroke-200 text-type-950 px-[7px] py-0',
+        destructive: 'bg-red-800 text-type-50 ',
       },
     },
     defaultVariants: {
@@ -35,15 +39,12 @@ interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-/**
- *
- */
-function Badge({ className, variant, ...props }: BadgeProps) {
+const Badge: React.FC<BadgeProps> = ({ className, variant, ...props }) => {
   return (
     <div
       className={twMerge(clsx(badgeVariants({ variant }), className))}
       {...props}
     />
   );
-}
+};
 export { Badge, badgeVariants };

@@ -11,7 +11,9 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AvatarExample } from './examples/avatar';
 import { BadgeExample } from './examples/badge';
+
 import { ProgressExample } from './examples/progress';
+import { ToogleExample } from './examples/toogle';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/badge',
     element: <BadgeExample />,
+  },
+  {
+    path: '/toogle',
+    element: <ToogleExample />,
   },
 ]);
 

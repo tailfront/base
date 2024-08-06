@@ -19,6 +19,7 @@ function Navigation(): JSX.Element {
       <Link to="/avatar">Avatar</Link>
       <Link to={'/progress'}>Progress</Link>
       <Link to={'/badge'}>Badge</Link>
+      <Link to={'/toogle'}>Toogle</Link>
     </div>
   );
 }
