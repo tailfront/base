@@ -6,6 +6,7 @@
  * import { Badge } from '@/components/badge';
  *
  * <Badge variant="default">Badge</Badge>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -26,7 +27,7 @@ const badgeVariants = cva(
         secondary: 'bg-container-100 text-type-950',
         outline:
           'bg-container-50 border border-stroke-200 text-type-950 px-[7px] py-0',
-        destructive: 'bg-red-800 text-type-50 ',
+        destructive: 'bg-red-800 text-type-50',
       },
     },
     defaultVariants: {
@@ -35,7 +36,7 @@ const badgeVariants = cva(
   },
 );
 
-interface BadgeProps
+export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
@@ -47,4 +48,5 @@ const Badge: React.FC<BadgeProps> = ({ className, variant, ...props }) => {
     />
   );
 };
+
 export { Badge, badgeVariants };

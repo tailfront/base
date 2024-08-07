@@ -20,6 +20,8 @@ function Navigation(): JSX.Element {
       <Link to={'/progress'}>Progress</Link>
       <Link to={'/badge'}>Badge</Link>
       <Link to={'/toogle'}>Toogle</Link>
+      <Link to={'/breadcrumb'}>Breadcrumb</Link>
+      <Link to={'/dropdown-menu'}>Dropdown menu</Link>
     </div>
   );
 }

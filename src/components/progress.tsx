@@ -6,6 +6,7 @@
  * import { Progress } from '@/components/progress';
  *
  * Progress value={40} />
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i @radix-ui/react-progress
@@ -39,4 +40,5 @@ const Progress = React.forwardRef<
   </ProgressPrimitive.Root>
 ));
 Progress.displayName = ProgressPrimitive.Root.displayName;
+
 export { Progress };

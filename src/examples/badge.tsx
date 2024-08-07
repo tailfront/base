@@ -18,9 +18,10 @@ function BadgeExample(): JSX.Element {
     <div className="fixed flex gap-4 m-8">
       <Badge variant="default">Badge</Badge>
       <Badge variant="secondary">Badge</Badge>
-      <Badge variant={'outline'}>Badge</Badge>
+      <Badge variant="outline">Badge</Badge>
       <Badge variant="destructive">Badge</Badge>
     </div>
   );
 }
+
 export { BadgeExample };

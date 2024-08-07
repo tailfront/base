@@ -10,9 +10,13 @@
  * } from "@/components/ui/avatar"
  *
  *  <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <<AvatarImage
+          src="https://avatars.githubusercontent.com/u/173272923?s=200&v=4"
+          alt="@tailfront"
+        />
         <AvatarFallback>CN</AvatarFallback>
     </Avatar>
+
 		@npm i react
 		@npm i --save-dev @types/react
 		@npm i @radix-ui/react-avatar
@@ -21,27 +25,10 @@
 		@npm i @tabler/icons-react
  */
 
-import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import clsx from 'clsx';
+import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-
-const Avatar = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={twMerge(
-      clsx(
-        'relative flex h-10 bg-container-100 w-10 shrink-0 overflow-hidden rounded-full font-sans',
-        className,
-      ),
-    )}
-    {...props}
-  />
-));
-Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
@@ -72,4 +59,20 @@ const AvatarFallback = React.forwardRef<
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-export { Avatar, AvatarImage, AvatarFallback };
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref={ref}
+    className={twMerge(
+      clsx(
+        'relative flex h-10 bg-container-100 w-10 shrink-0 overflow-hidden rounded-full font-sans',
+        className,
+      ),
+    )}
+    {...props}
+  />
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
+export { Avatar, AvatarFallback, AvatarImage };

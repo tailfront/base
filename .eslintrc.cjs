@@ -45,6 +45,7 @@ module.exports = {
         'jsdoc/no-undefined-types': 0,
         'jsdoc/check-alignment': 0,
         'jsdoc/check-values': 0,
+        'jsdoc/tag-lines': 0,
       },
     },
   ],
