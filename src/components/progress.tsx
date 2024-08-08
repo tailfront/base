@@ -3,9 +3,10 @@
  * @overview Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
- * import { Progress } from '@/components/progress';
- *
- * Progress value={40} />
+
+  import { Progress } from '@/components/progress';
+
+  Progress value={40} />
 
  * @npm i react
  * @npm i --save-dev @types/react

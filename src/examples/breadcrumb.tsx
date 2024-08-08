@@ -12,6 +12,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/breadcrumb';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/dropdown-menu';
 import { IconChevronDown } from '@tabler/icons-react';
 
 /**
@@ -37,12 +43,17 @@ function BreadcrumbExample(): JSX.Element {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/components"
-                className="w-13 flex gap-1 items-center"
-              >
-                Page <IconChevronDown className="size-3 text-neutral-400" />
-              </BreadcrumbLink>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="w-13 flex gap-1 items-center text-type-400">
+                  <span>Page</span>
+                  <IconChevronDown className="size-3 text-neutral-400" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  <DropdownMenuItem>Documentation</DropdownMenuItem>
+                  <DropdownMenuItem>Themes</DropdownMenuItem>
+                  <DropdownMenuItem>GitHub</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
 
@@ -70,12 +81,17 @@ function BreadcrumbExample(): JSX.Element {
               /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/components"
-                className="w-13 flex gap-1 items-center"
-              >
-                Page <IconChevronDown className="size-3 text-neutral-400" />
-              </BreadcrumbLink>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="w-13 flex gap-1 items-center text-type-400">
+                  <span>Page</span>
+                  <IconChevronDown className="size-3 text-neutral-400" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  <DropdownMenuItem>Documentation</DropdownMenuItem>
+                  <DropdownMenuItem>Themes</DropdownMenuItem>
+                  <DropdownMenuItem>GitHub</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </BreadcrumbItem>
             <BreadcrumbSeparator className="text-neutral-400">
               /

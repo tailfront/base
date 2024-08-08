@@ -2,7 +2,7 @@
  * @file accordion.tsx
  * @overview Collapsible sections for organizing and revealing content efficiently.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
-* @example
+ * @example
 
   import {
     Accordion,

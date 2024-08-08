@@ -3,11 +3,12 @@
  * @overview A two-state button that can be either on or off.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
- * import { Toggle } from '@/components/toogle';
- *
- * <Toggle aria-label="Toggle bold">
-      <IconBold className="h-4 w-4 text-type-500" />
-    </Toggle>
+
+  import { Toggle } from '@/components/toogle';
+
+  <Toggle aria-label="Toggle bold">
+    <IconBold className="h-4 w-4 text-type-500" />
+  </Toggle>
 
  * @npm i react
  * @npm i --save-dev @types/react

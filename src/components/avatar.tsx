@@ -3,19 +3,20 @@
  * @overview An image element with a fallback for representing the user.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
- * import {
- *  Avatar,
- *  AvatarFallback,
- *  AvatarImage
- * } from "@/components/ui/avatar"
- *
- *  <Avatar>
-        <<AvatarImage
+
+  import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage
+  } from "@/components/ui/avatar"
+
+  <Avatar>
+    <AvatarImage
           src="https://avatars.githubusercontent.com/u/173272923?s=200&v=4"
           alt="@tailfront"
-        />
-        <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
+    />
+    <AvatarFallback>CN</AvatarFallback>
+  </Avatar>
 
 		@npm i react
 		@npm i --save-dev @types/react
@@ -75,4 +76,5 @@ const Avatar = React.forwardRef<
   />
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
+
 export { Avatar, AvatarFallback, AvatarImage };

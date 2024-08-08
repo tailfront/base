@@ -13,9 +13,10 @@ import { AvatarExample } from './examples/avatar';
 import { BadgeExample } from './examples/badge';
 
 import { BreadcrumbExample } from './examples/breadcrumb';
+import { ButtonExample } from './examples/button';
 import { DropdownMenuExample } from './examples/dropdown-menu';
 import { ProgressExample } from './examples/progress';
-import { ToogleExample } from './examples/toogle';
+import { ToggleExample } from './examples/toggle';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/toogle',
-    element: <ToogleExample />,
+    element: <ToggleExample />,
   },
   {
     path: '/breadcrumb',
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: '/dropdown-menu',
     element: <DropdownMenuExample />,
+  },
+  {
+    path: '/button',
+    element: <ButtonExample />,
   },
 ]);
 

@@ -22,6 +22,7 @@ function Navigation(): JSX.Element {
       <Link to={'/toogle'}>Toogle</Link>
       <Link to={'/breadcrumb'}>Breadcrumb</Link>
       <Link to={'/dropdown-menu'}>Dropdown menu</Link>
+      <Link to={'/button'}>Button</Link>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { Progress } from '@/components/progress';
  * @returns {JSX.Element} Example of progress usage
  * @example
  * import {ProgressExample} from '@/examples/progress.tsx';
+
  * <ProgressExample />
  */
 function ProgressExample(): JSX.Element {

@@ -3,9 +3,10 @@
  * @overview Displays a badge or a component that looks like a badge.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
- * import { Badge } from '@/components/badge';
- *
- * <Badge variant="default">Badge</Badge>
+
+  import { Badge } from '@/components/badge';
+
+  <Badge variant="default">Badge</Badge>
 
  * @npm i react
  * @npm i --save-dev @types/react

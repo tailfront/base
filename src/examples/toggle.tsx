@@ -3,7 +3,7 @@
  * @overview Sandbox of components.
  */
 
-import { Toggle } from '@/components/toogle';
+import { Toggle } from '@/components/toggle';
 import { IconBold } from '@tabler/icons-react';
 
 /**
@@ -13,7 +13,7 @@ import { IconBold } from '@tabler/icons-react';
 
  * <ToogleExample />
  */
-function ToogleExample(): JSX.Element {
+function ToggleExample(): JSX.Element {
   document.title = 'Toogle';
   return (
     <div className="m-8 flex flex-col gap-4 bg-white p-4">
@@ -24,4 +24,4 @@ function ToogleExample(): JSX.Element {
   );
 }
 
-export { ToogleExample };
+export { ToggleExample };
