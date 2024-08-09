@@ -3,6 +3,32 @@
  * @overview Displays the path to the current resource using a hierarchy of links.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  } from "@/components/ui/breadcrumb"
+
+  <Breadcrumb>
+  <BreadcrumbList>
+     <BreadcrumbItem>
+       <BreadcrumbLink href="/">Home</BreadcrumbLink>
+     </BreadcrumbItem>
+     <BreadcrumbSeparator />
+     <BreadcrumbItem>
+       <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+     </BreadcrumbItem>
+     <BreadcrumbSeparator />
+     <BreadcrumbItem>
+       <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+     </BreadcrumbItem>
+    </BreadcrumbList>
+  </Breadcrumb>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -115,6 +141,7 @@ const BreadcrumbEllipsis: React.FC<React.ComponentProps<'span'>> = ({
   </span>
 );
 BreadcrumbEllipsis.displayName = 'BreadcrumbEllipsis';
+
 export {
   Breadcrumb,
   BreadcrumbEllipsis,

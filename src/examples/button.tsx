@@ -9,9 +9,9 @@ import { IconCircle } from '@tabler/icons-react';
 /**
  * @returns {JSX.Element} Example of button usage
  * @example
- * import {ButtonExample} from '@/examples/button.tsx';
- *
- * <ButtonExample />
+  import {ButtonExample} from '@/examples/button.tsx';
+
+  <ButtonExample />
  */
 function ButtonExample(): JSX.Element {
   document.title = 'Button';
@@ -20,103 +20,103 @@ function ButtonExample(): JSX.Element {
       <div className="flex gap-2">
         {/* size lg button */}
         <Button size="lg" variant={'primary'}>
-          <IconCircle />
+          <IconCircle className="size-5" />
           Button
-          <IconCircle />
+          <IconCircle className="size-5" />
         </Button>
         <Button size="lg" variant={'secondary'}>
-          <IconCircle />
+          <IconCircle className="size-5" />
           Button
-          <IconCircle />
+          <IconCircle className="size-5" />
         </Button>
         <Button size="lg" variant={'destructive'}>
-          <IconCircle />
+          <IconCircle className="size-5" />
           Button
-          <IconCircle />
+          <IconCircle className="size-5" />
         </Button>
         <Button size="lg" variant={'outline'}>
-          <IconCircle />
+          <IconCircle className="size-5" />
           Button
-          <IconCircle />
+          <IconCircle className="size-5" />
         </Button>
         <Button size="lg" variant={'ghost'}>
-          <IconCircle />
+          <IconCircle className="size-5" />
           Button
-          <IconCircle />
+          <IconCircle className="size-5" />
         </Button>
       </div>
       <div className="flex gap-2">
         {/* size default button */}
         <Button variant={'primary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button variant={'secondary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button variant={'destructive'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button variant={'outline'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button variant={'ghost'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
       </div>
       <div className="flex gap-2">
         {/* size default button */}
         <Button size={'sm'} variant={'primary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'sm'} variant={'secondary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'sm'} variant={'destructive'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'sm'} variant={'outline'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'sm'} variant={'ghost'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
           Button
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
       </div>
       <div className="flex gap-20">
         {/* size default button */}
         <Button size={'icon'} variant={'primary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'icon'} variant={'secondary'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'icon'} variant={'destructive'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'icon'} variant={'outline'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
         <Button size={'icon'} variant={'ghost'}>
-          <IconCircle />
+          <IconCircle className="size-4" />
         </Button>
       </div>
     </div>

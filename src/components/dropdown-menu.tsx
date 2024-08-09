@@ -3,6 +3,28 @@
  * @overview Displays a menu to the user — such as a set of actions or functions — triggered by a button.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
+
+  <DropdownMenu>
+    <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+    <DropdownMenuContent>
+      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem>Profile</DropdownMenuItem>
+      <DropdownMenuItem>Billing</DropdownMenuItem>
+      <DropdownMenuItem>Team</DropdownMenuItem>
+      <DropdownMenuItem>Subscription</DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -144,7 +166,7 @@ const DropdownMenuRadioItem = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex cursor-pointer select-none h-9 items-center squircle rounded-lg py-1.5 pl-8 pr-2 text-sm outline-none text-type-950 transition-colors focus:bg-container-100 nd data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex cursor-pointer select-none h-9 items-center squircle rounded-lg py-1.5 pl-8 pr-2 text-sm outline-none text-type-950 transition-colors focus:bg-container-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className,
       ),
     )}

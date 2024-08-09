@@ -23,6 +23,7 @@ import {
 import { DropdownMenuCheckboxItemProps } from '@radix-ui/react-dropdown-menu';
 import React from 'react';
 type Checked = DropdownMenuCheckboxItemProps['checked'];
+
 /**
  * @returns {JSX.Element} Example of dropdown-menu usage
  * @example

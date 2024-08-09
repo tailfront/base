@@ -12,10 +12,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AvatarExample } from './examples/avatar';
 import { BadgeExample } from './examples/badge';
 
+import { AlertDialogExample } from './examples/alert-dialog';
 import { BreadcrumbExample } from './examples/breadcrumb';
 import { ButtonExample } from './examples/button';
+import { CardExample } from './examples/card';
+import { CarouselExample } from './examples/carousel';
+import { DialogExample } from './examples/dialog';
 import { DropdownMenuExample } from './examples/dropdown-menu';
+import { InputExample } from './examples/input';
 import { ProgressExample } from './examples/progress';
+import { SeparatorExample } from './examples/separator';
 import { ToggleExample } from './examples/toggle';
 
 const router = createBrowserRouter([
@@ -54,6 +60,30 @@ const router = createBrowserRouter([
   {
     path: '/button',
     element: <ButtonExample />,
+  },
+  {
+    path: '/card',
+    element: <CardExample />,
+  },
+  {
+    path: '/input',
+    element: <InputExample />,
+  },
+  {
+    path: '/separator',
+    element: <SeparatorExample />,
+  },
+  {
+    path: '/dialog',
+    element: <DialogExample />,
+  },
+  {
+    path: '/carousel',
+    element: <CarouselExample />,
+  },
+  {
+    path: '/alert-dialog',
+    element: <AlertDialogExample />,
   },
 ]);
 

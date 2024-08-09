@@ -23,9 +23,9 @@ import { IconChevronDown } from '@tabler/icons-react';
 /**
  * @returns {JSX.Element} Example of breadcrumb usage
  * @example
- * import {BreadcrumbExample} from '@/examples/breadcrumb.tsx';
- *
- * <BreadcrumbExample />
+  import {BreadcrumbExample} from '@/examples/breadcrumb.tsx';
+
+  <BreadcrumbExample />
  */
 function BreadcrumbExample(): JSX.Element {
   document.title = 'Breadcrumb';
