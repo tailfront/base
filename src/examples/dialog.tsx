@@ -31,7 +31,7 @@ function DialogExample(): JSX.Element {
           <Button variant="outline">Dialog</Button>
         </DialogTrigger>
         <DialogContent className="">
-          <DialogHeader>
+          <DialogHeader className="w-[252px]">
             <DialogTitle>Title</DialogTitle>
             <DialogDescription>Subtitle</DialogDescription>
           </DialogHeader>

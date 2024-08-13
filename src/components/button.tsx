@@ -40,7 +40,7 @@ const buttonVariants = cva(
           'hover:bg-container-100 text-type-950 active:bg-container-100 squircle',
       },
       size: {
-        lg: 'h-10 w-[131px] px-4 py-2 text-base',
+        lg: 'h-10 w-[131px] px-4 py-2 text-base font-medium',
         default: 'h-9 w-[109px] px-3 py-2 text-sm',
         sm: 'h-8 w-[95px] px-2 py-2 text-xs',
         icon: 'size-9',

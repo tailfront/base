@@ -192,7 +192,7 @@ const DropdownMenuLabel = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-type-950 font-sans px-2 py-1.5 text-sm font-medium',
+        'text-type-950 font-sans px-3 py-1.5 text-sm font-medium',
         inset && 'pl-8',
         className,
       ),

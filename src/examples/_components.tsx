@@ -31,6 +31,13 @@ function Navigation(): JSX.Element {
       <Link to={'/separator'}>Separator</Link>
       <Link to={'/dialog'}>Dialog</Link>
       <Link to={'/alert-dialog'}>Alert dialog</Link>
+      <Separator />
+      <Link to={'/skeleton'}>Skeleton</Link>
+      <Link to={'/textarea'}>Textarea</Link>
+      <Link to={'/switch'}>Switch</Link>
+      <Link to={'/resizable'}>Resizable</Link>
+      <Link to={'/toggle-group'}>Toogle group</Link>
+      <Link to={'/table'}>Table</Link>
     </div>
   );
 }

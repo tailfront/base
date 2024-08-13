@@ -3,6 +3,7 @@
  * @overview Sandbox of components.
  */
 
+import { Button } from '@/components/button';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -38,11 +39,11 @@ function DropdownMenuExample(): JSX.Element {
   const [position, setPosition] = React.useState('bottom');
   document.title = 'DropdownMenu';
   return (
-    <div className="p-9 flex gap-4">
+    <div className="px-44 mt-10 flex gap-20">
       {/* Dropdown-menu one */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button>Open</button>
+          <Button>Open</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 h-[472px]">
           <DropdownMenuLabel className="h-9">My Account</DropdownMenuLabel>
@@ -114,7 +115,7 @@ function DropdownMenuExample(): JSX.Element {
       {/* Dropdown-menu two */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button>Open</button>
+          <Button>Open</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 h-40">
           <DropdownMenuLabel className="h-9">Appearance</DropdownMenuLabel>
@@ -143,9 +144,9 @@ function DropdownMenuExample(): JSX.Element {
       {/* Dropdown-menu three */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button>Open</button>
+          <Button>Open</Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-64">
+        <DropdownMenuContent className="w-64 h-[160px]">
           <DropdownMenuLabel className="h-9">Panel Position</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>

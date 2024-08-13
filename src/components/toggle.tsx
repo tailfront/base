@@ -26,11 +26,12 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const toggleVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium data-[state=on]:bg-container-100 data-[state=on]:text-type-500 squircle rounded-lg',
+  'inline-flex items-center justify-center rounded-md text-sm font-medium data-[state=on]:bg-container-100 data-[state=on]:text-type-500 squircle rounded-lg text-type-500',
   {
     variants: {
       variant: {
         default: 'bg-none',
+        outline: 'border border-stroke-200',
       },
       size: {
         default: 'size-9 px-2.5 py-2.5',

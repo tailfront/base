@@ -31,7 +31,7 @@ function AlertDialogExample(): JSX.Element {
         <AlertDialogTrigger asChild>
           <Button variant="outline">Alert Dialog</Button>
         </AlertDialogTrigger>
-        <AlertDialogContent>
+        <AlertDialogContent className="h-[180px]">
           <AlertDialogHeader>
             <AlertDialogTitle>Title</AlertDialogTitle>
             <AlertDialogDescription>
