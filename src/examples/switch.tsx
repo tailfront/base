@@ -14,7 +14,6 @@ import { Switch } from '@/components/switch';
  */
 function SwitchExample(): JSX.Element {
   document.title = 'Switch';
-
   return (
     <div className="m-8 bg-white p-4">
       <Switch />

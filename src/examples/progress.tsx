@@ -15,8 +15,8 @@ import { Progress } from '@/components/progress';
 function ProgressExample(): JSX.Element {
   document.title = 'Progress';
   return (
-    <div className="w-[380px] m-8 bg-white p-4">
-      <Progress value={38} />
+    <div className="w-[412px] m-8 bg-white p-4">
+      <Progress value={34.5} />
     </div>
   );
 }

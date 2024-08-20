@@ -65,8 +65,8 @@ function TableDemo(): JSX.Element {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
-          <TableRow className="">
+        <TableFooter className="">
+          <TableRow>
             <TableCell colSpan={3}>Total</TableCell>
             <TableCell className="text-right">$2,500.00</TableCell>
           </TableRow>

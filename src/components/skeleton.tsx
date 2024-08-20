@@ -25,7 +25,7 @@ const Skeleton: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <div
       className={twMerge(
-        clsx('animate-pulse rounded-md bg-container-100', className),
+        clsx('animate-pulse rounded-full bg-container-100', className),
       )}
       {...props}
     />

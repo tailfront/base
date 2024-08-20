@@ -37,23 +37,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={twMerge(
-      clsx(
-        'rounded-lg border border-stroke-200 squircle bg-container-50 p-4 space-y-4',
-        className,
-      ),
-    )}
-    {...props}
-  />
-));
-Card.displayName = 'Card';
-
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -74,7 +57,7 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-base font-medium text-type-950 h-6 flex items-center leading-none tracking-tight',
+        'text-base font-medium text-type-950 flex items-center tracking-normal line-6',
         className,
       ),
     )}
@@ -89,7 +72,9 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={twMerge(clsx('text-sm font-normal text-type-500', className))}
+    className={twMerge(
+      clsx('text-sm font-normal tracking-normal text-type-500', className),
+    )}
     {...props}
   />
 ));
@@ -99,7 +84,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={twMerge(clsx('', className))} {...props} />
+  <div ref={ref} className={twMerge(clsx(className))} {...props} />
 ));
 CardContent.displayName = 'CardContent';
 
@@ -115,11 +100,28 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = 'CardFooter';
 
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={twMerge(
+      clsx(
+        'rounded-lg border border-stroke-200 squircle bg-container-50 p-4 space-y-4',
+        className,
+      ),
+    )}
+    {...props}
+  />
+));
+Card.displayName = 'Card';
+
 export {
-  Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
+  Card,
 };

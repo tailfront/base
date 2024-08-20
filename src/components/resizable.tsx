@@ -22,7 +22,7 @@ const ResizablePanelGroup: React.FC<
   <ResizablePrimitive.PanelGroup
     className={twMerge(
       clsx(
-        'flex h-full w-full data-[panel-group-direction=vertical]:flex-col',
+        'flex h-full w-full text-type-950 data-[panel-group-direction=vertical]:flex-col',
         className,
       ),
     )}

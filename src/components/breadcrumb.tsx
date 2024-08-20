@@ -89,7 +89,12 @@ const BreadcrumbLink = React.forwardRef<
   return (
     <Comp
       ref={ref}
-      className={twMerge(clsx('transition-colors text-type-400', className))}
+      className={twMerge(
+        clsx(
+          'transition-colors tracking-wide font-normal text-type-400',
+          className,
+        ),
+      )}
       {...props}
     />
   );

@@ -8,7 +8,7 @@
 
 	<Separator />
 
- * @npm i @tabler/icons-react
+ * @npm i react
  * @npm i @radix-ui/react-separator
  * @npm i clsx
  * @npm i tailwind-merge

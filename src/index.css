@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 body {
-    /* Detect default colors */
-    color: red;
-    background: red;
-    /* Figma background */
-    background-color: #F5F5F5;
+  /* Detect default colors */
+  color: red;
+  background: red;
+  /* Figma background */
+  background-color: #f5f5f5;
 }

@@ -13,7 +13,6 @@
  * @npm i clsx
  * @npm i tailwind-merge
  */
-
 import clsx from 'clsx';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -27,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         type={type}
         className={twMerge(
           clsx(
-            'flex h-9 w-full border border-stroke-200 rounded-lg border-input bg-container-50 px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-type-400 focus-visible:outline-none focus-visible:ring focus:ring-accent-100 disabled:cursor-not-allowed disabled:opacity-50 text-type-950',
+            'flex w-full border border-stroke-200 rounded-lg bg-container-50 px-3 py-2 text-sm placeholder:text-type-400 focus-visible:outline-none focus-visible:ring focus:ring-accent-100 disabled:cursor-not-allowed disabled:opacity-50 text-type-950 file:text-type-950 tracking-normal',
             className,
           ),
         )}

@@ -18,7 +18,7 @@ function SkeletonExample(): JSX.Element {
     <div className="flex items-center space-x-3 m-8 bg-white p-4">
       <Skeleton className="h-12 w-12 rounded-full" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[140	px]" />
+        <Skeleton className="h-4 w-[140px]" />
         <Skeleton className="h-4 w-[140px]" />
       </div>
     </div>

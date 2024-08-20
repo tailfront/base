@@ -3,6 +3,7 @@
  * @overview A control that allows the user to toggle between checked and not checked.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
   import { Switch } from '@/components/switch';
 
   <Switch />
@@ -26,7 +27,7 @@ const Switch = React.forwardRef<
   <SwitchPrimitives.Root
     className={twMerge(
       clsx(
-        'peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-accent-800 data-[state=unchecked]:bg-container-200',
+        'inline-flex h-5 w-9 items-center rounded-full border-2 border-transparent  focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-accent-800 data-[state=unchecked]:bg-container-200',
         className,
       ),
     )}
@@ -36,7 +37,7 @@ const Switch = React.forwardRef<
     <SwitchPrimitives.Thumb
       className={twMerge(
         clsx(
-          'pointer-events-none block size-4 rounded-full bg-type-50 shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0',
+          ' size-4 rounded-full bg-type-50 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0',
         ),
       )}
     />

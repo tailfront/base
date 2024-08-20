@@ -24,7 +24,7 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 squircle',
+  'inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 squircle',
   {
     variants: {
       variant: {
@@ -40,7 +40,7 @@ const buttonVariants = cva(
           'hover:bg-container-100 text-type-950 active:bg-container-100 squircle',
       },
       size: {
-        lg: 'h-10 w-[131px] px-4 py-2 text-base font-medium',
+        lg: 'px-4 py-2 gap-1 tracking-normal text-base',
         default: 'h-9 w-[109px] px-3 py-2 text-sm',
         sm: 'h-8 w-[95px] px-2 py-2 text-xs',
         icon: 'size-9',

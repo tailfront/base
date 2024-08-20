@@ -22,7 +22,7 @@ const Table = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'w-full caption-bottom text-sm border border-stroke-200 bg-container-50 rounded-lg squircle',
+          'w-full caption-bottom text-sm border border-collapse border-stroke-200 bg-container-50 rounded-lg squircle',
           className,
         ),
       )}
@@ -38,7 +38,7 @@ const TableHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <thead
     ref={ref}
-    className={twMerge(clsx('&_tr]:border-b', className))}
+    className={twMerge(clsx('&_tr]:border-b ', className))}
     {...props}
   />
 ));
@@ -64,7 +64,7 @@ const TableFooter = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'border-t bg-container-100 font-medium [&>tr]:last:border-b-0',
+        'border-t font-medium bg-container-100 -z-0 [&>tr]:last:border-b-0',
         className,
       ),
     )}

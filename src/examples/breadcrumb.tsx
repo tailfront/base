@@ -35,9 +35,7 @@ function BreadcrumbExample(): JSX.Element {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/" className="w-10">
-                Home
-              </BreadcrumbLink>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -46,7 +44,7 @@ function BreadcrumbExample(): JSX.Element {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <DropdownMenu>
-                <DropdownMenuTrigger className="w-[50px] flex gap-1 items-center text-type-400">
+                <DropdownMenuTrigger className="flex gap-1 items-center text-type-400">
                   <span>Page</span>
                   <IconChevronDown className="size-3 text-neutral-400" />
                 </DropdownMenuTrigger>
@@ -60,7 +58,7 @@ function BreadcrumbExample(): JSX.Element {
             <BreadcrumbSeparator />
 
             <BreadcrumbItem>
-              <BreadcrumbPage className="w-[88px]">Current Page</BreadcrumbPage>
+              <BreadcrumbPage>Current Page</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -69,7 +67,7 @@ function BreadcrumbExample(): JSX.Element {
         <Breadcrumb>
           <BreadcrumbList className="w-88">
             <BreadcrumbItem>
-              <BreadcrumbLink href="/" className="w-10 ">
+              <BreadcrumbLink href="/" className="w-10">
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>

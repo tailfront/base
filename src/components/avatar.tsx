@@ -12,8 +12,8 @@
 
   <Avatar>
     <AvatarImage
-          src="https://avatars.githubusercontent.com/u/173272923?s=200&v=4"
-          alt="@tailfront"
+    src="https://avatars.githubusercontent.com/u/173272923?s=200&v=4"
+    alt="@tailfront"
     />
     <AvatarFallback>CN</AvatarFallback>
   </Avatar>
@@ -37,7 +37,7 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={twMerge(clsx('aspect-square h-full w-full', className))}
+    className={twMerge(clsx('h-full w-full', className))}
     {...props}
   />
 ));
@@ -51,7 +51,7 @@ const AvatarFallback = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'flex h-full w-full items-center justify-center rounded-full bg-container-100 text-type-400 text-sm',
+        'flex items-center justify-center p-2.5 pl-[11px] leading-5 rounded-full bg-container-100 text-type-400 text-sm',
         className,
       ),
     )}
@@ -68,7 +68,7 @@ const Avatar = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex h-10 bg-container-100 w-10 shrink-0 overflow-hidden rounded-full font-sans',
+        'relative flex bg-container-100  overflow-hidden rounded-full font-sans',
         className,
       ),
     )}

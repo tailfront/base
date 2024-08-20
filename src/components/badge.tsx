@@ -20,14 +20,13 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const badgeVariants = cva(
-  'inline-flex items-center px-2 py-0.5 text-xs font-medium transition-colors rounded-lg',
+  'inline-flex items-center px-2 py-0.5 justify-center tracking-wide font-sans text-xs font-medium rounded-lg',
   {
     variants: {
       variant: {
         default: 'bg-accent-800 text-type-50',
         secondary: 'bg-container-100 text-type-950',
-        outline:
-          'bg-container-50 border border-stroke-200 text-type-950 px-[7px] py-0',
+        outline: 'bg-container-50 !border border-stroke-200 text-type-950',
         destructive: 'bg-red-800 text-type-50',
       },
     },

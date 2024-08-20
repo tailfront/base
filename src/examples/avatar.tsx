@@ -15,7 +15,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
 function AvatarExample(): JSX.Element {
   document.title = 'Avatar';
   return (
-    <div className="m-8 flex gap-4">
+    <div className="m-8 flex gap-4 bg-white p-4">
       <Avatar>
         <AvatarFallback>KK</AvatarFallback>
       </Avatar>
@@ -23,6 +23,7 @@ function AvatarExample(): JSX.Element {
         <AvatarImage
           src="https://avatars.githubusercontent.com/u/173272923?s=200&v=4"
           alt="@tailfront"
+          className="size-10"
         />
         <AvatarFallback>KK</AvatarFallback>
       </Avatar>
