@@ -1,5 +1,5 @@
 /**
- * @file toogle.tsx
+ * @file toggle.tsx
  * @overview A two-state button that can be either on or off.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
@@ -16,7 +16,6 @@
  * @npm i clsx
  * @npm i tailwind-merge
  * @npm i class-variance-authority
- * @npm i @tabler/icons-react
  */
 
 import * as TooglePrimitive from '@radix-ui/react-toggle';
@@ -57,4 +56,4 @@ const Toggle = React.forwardRef<
 ));
 Toggle.displayName = TooglePrimitive.Root.displayName;
 
-export { Toggle, toggleVariants };
+export { toggleVariants, Toggle };

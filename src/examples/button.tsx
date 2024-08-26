@@ -19,7 +19,7 @@ function ButtonExample(): JSX.Element {
     <div className="bg-white p-4 m-2">
       <div className="flex">
         <div className="flex flex-col gap-4 m-4">
-          <div className="flex flex-col gap-2">
+          <div className="space-x-2">
             <Button size="lg" variant={'primary'}>
               <IconCircle className="size-5" />
               Button
@@ -37,25 +37,25 @@ function ButtonExample(): JSX.Element {
             </Button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="space-x-2">
             <Button size="lg" variant={'secondary'}>
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
               Button
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
             <Button variant={'secondary'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
             <Button size={'sm'} variant={'secondary'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="space-x-2">
             <Button size="lg" variant={'destructive'}>
               <IconCircle className="size-5" />
               Button
@@ -73,46 +73,46 @@ function ButtonExample(): JSX.Element {
             </Button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="space-x-2">
             <Button size="lg" variant={'outline'}>
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
               Button
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
             <Button variant={'outline'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
             <Button size={'sm'} variant={'outline'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="space-x-2">
             <Button size="lg" variant={'ghost'}>
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
               Button
-              <IconCircle className="size-5" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
             <Button variant={'ghost'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
             <Button size={'sm'} variant={'ghost'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
               Button
-              <IconCircle className="size-4" />
+              <IconCircle className="size-4 text-type-500" />
             </Button>
           </div>
         </div>
         {/* disabled button */}
         <div>
           <div className="flex flex-col gap-4 m-4">
-            <div className="flex flex-col gap-2">
+            <div className="space-x-2">
               <Button size="lg" variant={'primary'} disabled>
                 <IconCircle className="size-5" />
                 Button
@@ -130,25 +130,25 @@ function ButtonExample(): JSX.Element {
               </Button>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="space-x-2">
               <Button size="lg" variant={'secondary'} disabled>
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
                 Button
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
               </Button>
               <Button variant={'secondary'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
               <Button size={'sm'} variant={'secondary'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="space-x-2">
               <Button size="lg" variant={'destructive'} disabled>
                 <IconCircle className="size-5" />
                 Button
@@ -166,39 +166,39 @@ function ButtonExample(): JSX.Element {
               </Button>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="space-x-2">
               <Button size="lg" variant={'outline'} disabled>
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
                 Button
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
               </Button>
               <Button variant={'outline'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
               <Button size={'sm'} variant={'outline'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="space-x-2">
               <Button size="lg" variant={'ghost'} disabled>
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
                 Button
-                <IconCircle className="size-5" />
+                <IconCircle className="size-5 text-type-500" />
               </Button>
               <Button variant={'ghost'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
               <Button size={'sm'} variant={'ghost'} disabled>
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
                 Button
-                <IconCircle className="size-4" />
+                <IconCircle className="size-4 text-type-500" />
               </Button>
             </div>
           </div>
@@ -210,16 +210,16 @@ function ButtonExample(): JSX.Element {
               <IconCircle className="size-4" />
             </Button>
             <Button size={'icon'} variant={'secondary'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
             <Button size={'icon'} variant={'destructive'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-5" />
             </Button>
             <Button size={'icon'} variant={'outline'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
             <Button size={'icon'} variant={'ghost'}>
-              <IconCircle className="size-4" />
+              <IconCircle className="size-5 text-type-500" />
             </Button>
           </div>
           {/* disabled button */}

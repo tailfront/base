@@ -3,6 +3,11 @@
  * @overview Renders an accessible label associated with controls.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import { Label } from "@/components/label"
+
+  <Label htmlFor="email">Your email address</Label>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i @radix-ui/react-label
@@ -18,7 +23,7 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const labelVariants = cva(
-  'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-desabled:opacity-70 text-type-950',
+  'text-sm font-medium peer-disabled:cursor-not-allowed peer-desabled:opacity-70  text-type-950',
 );
 
 const Label = React.forwardRef<
@@ -34,4 +39,4 @@ const Label = React.forwardRef<
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
 
-export { Label };
+export { labelVariants, Label };

@@ -86,7 +86,7 @@ function NavigationMenuExample(): JSX.Element {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="flex flex-col p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <ul className="flex flex-col p-4 w-[528px] ">
                 <ListItem href="/docs" title="Introduction">
                   Beautifully designed components that you can copy and paste
                   into your apps. Accessible.
@@ -161,7 +161,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={twMerge(
             clsx(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-container-100 focus:bg-container-100',
+              'block select-none space-y-2 rounded-md py-3.5 px-3 leading-none no-underline outline-none transition-colors hover:bg-container-100 focus:bg-container-100',
               className,
             ),
           )}

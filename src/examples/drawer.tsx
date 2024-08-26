@@ -33,7 +33,7 @@ function DrawerExample(): JSX.Element {
             <DrawerDescription>Subtitle</DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
-            <Button className="float-right w-[60px]">Done</Button>
+            <Button className="float-right w-[60px] h-9 text-sm">Done</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

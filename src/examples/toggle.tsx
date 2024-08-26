@@ -1,5 +1,5 @@
 /**
- * @file toogle.tsx
+ * @file toggle.tsx
  * @overview Sandbox of components.
  */
 

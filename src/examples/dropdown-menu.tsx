@@ -42,11 +42,11 @@ function DropdownMenuExample(): JSX.Element {
     <div className="px-44 mt-10 flex gap-20">
       {/* Dropdown-menu one */}
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenuTrigger>
           <Button>Open</Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-64 h-[472px]">
-          <DropdownMenuLabel className="h-9">My Account</DropdownMenuLabel>
+        <DropdownMenuContent className="w-64">
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
@@ -91,7 +91,7 @@ function DropdownMenuExample(): JSX.Element {
               </DropdownMenuPortal>
             </DropdownMenuSub>
             <DropdownMenuItem>
-              <span>New Team</span>
+              <span>New team</span>
               <DropdownMenuShortcut>⌘ + T</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuGroup>
@@ -118,7 +118,7 @@ function DropdownMenuExample(): JSX.Element {
           <Button>Open</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 h-40">
-          <DropdownMenuLabel className="h-9">Appearance</DropdownMenuLabel>
+          <DropdownMenuLabel>Appearance</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
             checked={showStatusBar}
@@ -147,7 +147,7 @@ function DropdownMenuExample(): JSX.Element {
           <Button>Open</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64 h-[160px]">
-          <DropdownMenuLabel className="h-9">Panel Position</DropdownMenuLabel>
+          <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
             <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>

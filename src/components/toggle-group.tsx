@@ -3,6 +3,15 @@
  * @overview A set of two-state buttons that can be toggled on or off.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import { ToggleGroup, ToggleGroupItem } from "@/components/toggle-group"
+
+  <ToggleGroup type="single">
+    <ToggleGroupItem value="a">A</ToggleGroupItem>
+    <ToggleGroupItem value="b">B</ToggleGroupItem>
+    <ToggleGroupItem value="c">C</ToggleGroupItem>
+  </ToggleGroup>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i @radix-ui/react-toggle-group
@@ -27,33 +36,12 @@ const ToggleGroupContext = React.createContext<
   variant: 'default',
 });
 
-const ToggleGroup = React.forwardRef<
-  React.ElementRef<typeof ToggleGroupPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
-    VariantProps<typeof toggleVariants>
->(({ className, variant, size, children, ...props }, ref) => (
-  <ToggleGroupPrimitive.Root
-    ref={ref}
-    className={twMerge(
-      clsx('flex items-center justify-center gap-1', className),
-    )}
-    {...props}
-  >
-    <ToggleGroupContext.Provider value={{ variant, size }}>
-      {children}
-    </ToggleGroupContext.Provider>
-  </ToggleGroupPrimitive.Root>
-));
-
-ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
-
 const ToggleGroupItem = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &
     VariantProps<typeof toggleVariants>
 >(({ className, children, variant, size, ...props }, ref) => {
   const context = React.useContext(ToggleGroupContext);
-
   return (
     <ToggleGroupPrimitive.Item
       ref={ref}
@@ -75,4 +63,23 @@ const ToggleGroupItem = React.forwardRef<
 
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 
-export { ToggleGroup, ToggleGroupItem };
+const ToggleGroup = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
+    VariantProps<typeof toggleVariants>
+>(({ className, variant, size, children, ...props }, ref) => (
+  <ToggleGroupPrimitive.Root
+    ref={ref}
+    className={twMerge(
+      clsx('flex items-center justify-center gap-1', className),
+    )}
+    {...props}
+  >
+    <ToggleGroupContext.Provider value={{ variant, size }}>
+      {children}
+    </ToggleGroupContext.Provider>
+  </ToggleGroupPrimitive.Root>
+));
+ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
+
+export { ToggleGroupItem, ToggleGroup };

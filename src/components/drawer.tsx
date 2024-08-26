@@ -15,17 +15,6 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Drawer as DrawerPrimitive } from 'vaul';
 
-const Drawer = ({
-  shouldScaleBackground = true,
-  ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>): JSX.Element => (
-  <DrawerPrimitive.Root
-    shouldScaleBackground={shouldScaleBackground}
-    {...props}
-  />
-);
-Drawer.displayName = 'Drawer';
-
 const DrawerTrigger = DrawerPrimitive.Trigger;
 
 const DrawerPortal = DrawerPrimitive.Portal;
@@ -56,13 +45,13 @@ const DrawerContent = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'fixed inset-x-2 bottom-0 z-50 mt-24 flex h-[144px] flex-col rounded-t-[8px] squircle bg-container-50',
+          'fixed inset-x-2 bottom-0 z-50 mt-24 flex flex-col rounded-t-lg squircle bg-container-50',
           className,
         ),
       )}
       {...props}
     >
-      <div className="mx-auto mt-2 h-1 w-[64px] rounded-full bg-container-200" />
+      <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-container-200" />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -101,7 +90,7 @@ const DrawerTitle = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-base h-6 text-start flex items-center font-medium leading-none text-type-950 tracking-tight',
+        'text-base text-start flex items-center font-medium leading-6 text-type-950 tracking-normal',
         className,
       ),
     )}
@@ -116,11 +105,24 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={twMerge(clsx('text-start h-5 text-sm text-type-500', className))}
+    className={twMerge(
+      clsx('text-start tracking-normal text-sm text-type-500', className),
+    )}
     {...props}
   />
 ));
 DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
+
+const Drawer = ({
+  shouldScaleBackground = true,
+  ...props
+}: React.ComponentProps<typeof DrawerPrimitive.Root>): JSX.Element => (
+  <DrawerPrimitive.Root
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />
+);
+Drawer.displayName = 'Drawer';
 
 export {
   Drawer,

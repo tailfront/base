@@ -20,7 +20,7 @@ import {
 function AccordionExample(): JSX.Element {
   document.title = 'Accordion';
   return (
-    <div className="m-8 w-[324px]">
+    <div className="m-8 w-[324px] p-2.5">
       <Accordion type="single" collapsible defaultValue="1">
         <AccordionItem value="1">
           <AccordionTrigger>Title</AccordionTrigger>

@@ -121,9 +121,6 @@ function Navigation(): JSX.Element {
       <li className="text-red-400">
         <Link to={'/slider'}>Slider</Link>
       </li>
-      <li className="text-red-400">
-        <Link to={'/navigation-menu'}>Navigation Menu</Link>
-      </li>
       <li>
         <Link to={'/alert'}>Alert</Link>
       </li>

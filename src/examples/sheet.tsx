@@ -34,31 +34,31 @@ function SheetExample(): JSX.Element {
           <Button variant="outline">Open</Button>
         </SheetTrigger>
         <SheetContent className="space-y-4" side={'right'}>
-          <SheetHeader className="w-[236px]">
+          <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>
               Make changes to your profile here. Click save when you're done.
             </SheetDescription>
           </SheetHeader>
           <Separator />
-          <div className="grid gap-4 py-4">
-            <div className="items-center gap-4">
+          <div className="grid gap-3">
+            <div className="items-center">
               <Label htmlFor="name" className="text-right">
                 Name
               </Label>
-              <Input id="name" value="Kamol Kuchkarov" className="col-span-3" />
+              <Input id="name" value="Komol Kuchkarov" />
             </div>
-            <div className="items-center gap-4">
+            <div className="items-center ">
               <Label htmlFor="username" className="text-right">
                 Username
               </Label>
-              <Input id="username" value="@kuchkarov" className="col-span-3" />
+              <Input id="username" value="@kuchkarov" />
             </div>
           </div>
           <SheetFooter>
             <SheetClose asChild>
               <Button type="submit" className="w-[119px]">
-                Save changes
+                Save shanges
               </Button>
             </SheetClose>
           </SheetFooter>

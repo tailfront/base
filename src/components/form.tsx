@@ -3,6 +3,7 @@
  * @overview Building forms with React Hook Form and Zod.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
   import {
   Form,
   FormControl,
@@ -11,7 +12,7 @@
   FormItem,
   FormLabel,
   FormMessage,
-  } from "@/components/ui/form"
+  } from "@/components/form"
   import { Input } from "@/components/ui/input"
 
   const formSchema = z.object({
@@ -34,7 +35,6 @@
     // ✅ This will be type-safe and validated.
     console.log(values)
   }
-
 
   <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -66,7 +66,7 @@
  * @npm i react-hook-form
  * @npm i @radix-ui/react-slot
  * @npm i zod
- * @npx tailfron elements label
+ * @npx tailfront elements label
  */
 
 import * as LabelPrimitive from '@radix-ui/react-label';
@@ -85,13 +85,14 @@ import {
 import { twMerge } from 'tailwind-merge';
 import { Label } from './label';
 
-const Form = FormProvider;
-
 type FormFialdContextValue<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
   name: TName;
+};
+type FormItemContextValue = {
+  id: string;
 };
 
 const FormFieldContext = React.createContext<FormFialdContextValue>(
@@ -142,10 +143,6 @@ const useFormField = (): {
     formMessageId: `${id}-form-item-message`,
     ...fieldState,
   };
-};
-
-type FormItemContextValue = {
-  id: string;
 };
 
 const FormItemContext = React.createContext<FormItemContextValue>(
@@ -247,13 +244,15 @@ const FormMessage = React.forwardRef<
 });
 FormMessage.displayName = 'FormMessage';
 
+const Form = FormProvider;
+
 export {
-  Form,
+  useFormField,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-  useFormField,
+  Form,
 };

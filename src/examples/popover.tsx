@@ -21,7 +21,7 @@ function PopoverExample(): JSX.Element {
     <div className="bg-white p-4 m-24">
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline">Open popover</Button>
+          <Button variant="outline">Open Popover</Button>
         </PopoverTrigger>
         <PopoverContent className="w-80">
           <div className="grid gap-4">
@@ -35,10 +35,7 @@ function PopoverExample(): JSX.Element {
             </div>
             <div className="grid gap-2">
               <div className="flex items-center gap-[18px]">
-                <Label
-                  htmlFor="width"
-                  className="w-[76px] h-5 flex items-center"
-                >
+                <Label htmlFor="width" className="w-[76px] flex items-center">
                   Width
                 </Label>
                 <Input
@@ -50,7 +47,7 @@ function PopoverExample(): JSX.Element {
               <div className="flex items-center gap-[18px]">
                 <Label
                   htmlFor="maxWidth"
-                  className="w-[76px] h-5 flex items-center"
+                  className="w-[76px] flex items-center"
                 >
                   Max. width
                 </Label>
@@ -61,10 +58,7 @@ function PopoverExample(): JSX.Element {
                 />
               </div>
               <div className="flex items-center gap-[18px]">
-                <Label
-                  htmlFor="height"
-                  className="w-[76px] h-5 flex items-center"
-                >
+                <Label htmlFor="height" className="w-[76px] flex items-center">
                   Height
                 </Label>
                 <Input
@@ -76,7 +70,7 @@ function PopoverExample(): JSX.Element {
               <div className="flex items-center gap-[18px]">
                 <Label
                   htmlFor="maxHeight"
-                  className="w-[76px] h-10 flex items-center"
+                  className="w-[76px] flex items-center"
                 >
                   Max. height
                 </Label>

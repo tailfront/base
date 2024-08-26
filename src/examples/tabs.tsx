@@ -16,7 +16,7 @@ function TabsExample(): JSX.Element {
   document.title = 'Tabs';
   return (
     <div className="bg-white m-8 p-4 flex flex-col gap-4">
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="tab1">Tab</TabsTrigger>
           <TabsTrigger value="tab2">Tab</TabsTrigger>
@@ -27,7 +27,7 @@ function TabsExample(): JSX.Element {
         <TabsContent value="tab2">Change your password here.</TabsContent>
       </Tabs>
 
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="tab1">Tab</TabsTrigger>
           <TabsTrigger value="tab2">Tab</TabsTrigger>
@@ -42,7 +42,7 @@ function TabsExample(): JSX.Element {
         </TabsContent>
       </Tabs>
 
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="tab1">Tab</TabsTrigger>
           <TabsTrigger value="tab2">Tab</TabsTrigger>
@@ -59,7 +59,7 @@ function TabsExample(): JSX.Element {
         <TabsContent value="tab4">Change your password here.</TabsContent>
       </Tabs>
 
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="tab1">Tab</TabsTrigger>
           <TabsTrigger value="Tab2">Tab</TabsTrigger>

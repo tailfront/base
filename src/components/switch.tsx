@@ -37,7 +37,7 @@ const Switch = React.forwardRef<
     <SwitchPrimitives.Thumb
       className={twMerge(
         clsx(
-          ' size-4 rounded-full bg-type-50 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0',
+          'size-4 rounded-full bg-type-50 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0',
         ),
       )}
     />

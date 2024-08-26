@@ -11,7 +11,7 @@
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+  } from "@/components/dropdown-menu"
 
   <DropdownMenu>
     <DropdownMenuTrigger>Open</DropdownMenuTrigger>
@@ -39,8 +39,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-const DropdownMenu = DropdownMenuPrimitive.Root;
-
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 
 const DropdownMenuGroup = DropdownMenuPrimitive.Group;
@@ -61,7 +59,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'flex cursor-default h-9 select-none items-center rounded-lg squircle px-3 py-2 text-sm outline-none text-type-950 focus:bg-container-100 data-[state=open]:bg-container-100',
+        'flex select-none items-center rounded-lg squircle px-3 py-2 text-sm outline-none text-type-950 focus:bg-container-100 data-[state=open]:bg-container-100',
         inset && 'pl-8',
         className,
       ),
@@ -82,7 +80,7 @@ const DropdownMenuSubContent = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'z-50 min-w-[8rem] overflow-hidden rounded-lg squircle border bg-container-50 p-1 text-type-950 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 ml-2',
+        'min-w-[8rem] rounded-lg squircle border bg-container-50 p-1 text-type-950 shadow-lg ml-3',
         className,
       ),
     )}
@@ -102,7 +100,7 @@ const DropdownMenuContent = React.forwardRef<
       sideOffset={sideOffset}
       className={twMerge(
         clsx(
-          'z-50 min-w-[8rem] overflow-hidden squircle rounded-lg border border-stroke-200 bg-container-50 p-1 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+          'z-50  overflow-hidden squircle rounded-lg border border-stroke-200 bg-container-50 p-1',
           className,
         ),
       )}
@@ -122,7 +120,7 @@ const DropdownMenuItem = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative text-type-950 flex cursor-pointer select-none items-center rounded-lg px-3 py-2 h-9 text-sm font-normal outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-container-100',
+        'relative text-type-950 flex cursor-pointer outline-none select-none items-center rounded-lg px-3 py-2 text-sm font-normal focus:bg-container-100',
         inset && 'pl-8',
         className,
       ),
@@ -140,16 +138,16 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex cursor-pointer select-none h-9 items-center squircle rounded-lg py-1.5 pl-8 pr-2 text-sm outline-none text-type-950 transition-colors focus:bg-container-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex cursor-pointer items-center squircle rounded-lg py-2 pl-9 pr-2 text-sm text-type-950 outline-none hover:bg-container-100',
         className,
       ),
     )}
     checked={checked}
     {...props}
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <span className="absolute left-3 flex size-3.5 items-center justify-center ">
       <DropdownMenuPrimitive.ItemIndicator>
-        <IconCheck className="h-4 w-4" />
+        <IconCheck className="size-4" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -166,15 +164,15 @@ const DropdownMenuRadioItem = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex cursor-pointer select-none h-9 items-center squircle rounded-lg py-1.5 pl-8 pr-2 text-sm outline-none text-type-950 transition-colors focus:bg-container-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'flex cursor-pointer items-center squircle rounded-lg py-2 pl-9 pr-2 text-sm outline-none text-type-950 focus:bg-container-100',
         className,
       ),
     )}
     {...props}
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <span className="absolute left-3 flex">
       <DropdownMenuPrimitive.ItemIndicator>
-        <IconCheck className="h-4 w-4" />
+        <IconCheck className="size-4" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -192,7 +190,7 @@ const DropdownMenuLabel = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-type-950 font-sans px-3 py-1.5 text-sm font-medium',
+        'text-type-950 tracking-normal font-sans px-3 py-2 text-sm font-medium',
         inset && 'pl-8',
         className,
       ),
@@ -226,6 +224,8 @@ const DropdownMenuShortcut: React.FC<React.HTMLAttributes<HTMLSpanElement>> = ({
   );
 };
 DropdownMenuShortcut.displayName = 'DropdownMenuShortcut';
+
+const DropdownMenu = DropdownMenuPrimitive.Root;
 
 export {
   DropdownMenu,

@@ -3,6 +3,20 @@
  * @overview For sighted users to preview content available behind a link.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+  } from "@/components/hover-card"
+
+  <HoverCard>
+    <HoverCardTrigger>Hover</HoverCardTrigger>
+    <HoverCardContent>
+    The React Framework – created and maintained by @vercel.
+    </HoverCardContent>
+  </HoverCard>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -29,7 +43,7 @@ const HoverCardContent = React.forwardRef<
     sideOffset={sideOffset}
     className={twMerge(
       clsx(
-        'z-50 w-64 rounded-lg squircle shadow-md border bg-container-50 p-4 text-type-950  outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'z-50 mt-3 rounded-lg squircle shadow-md border bg-container-50 p-4 text-type-950 ml-1',
         className,
       ),
     )}

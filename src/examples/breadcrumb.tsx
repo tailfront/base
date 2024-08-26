@@ -56,18 +56,17 @@ function BreadcrumbExample(): JSX.Element {
               </DropdownMenu>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
-
             <BreadcrumbItem>
               <BreadcrumbPage>Current Page</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="w-[257px]">
+      <div className="w-[258px]">
         <Breadcrumb>
           <BreadcrumbList className="w-88">
             <BreadcrumbItem>
-              <BreadcrumbLink href="/" className="w-10">
+              <BreadcrumbLink href="/" className="w">
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>

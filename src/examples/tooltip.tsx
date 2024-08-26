@@ -1,5 +1,5 @@
 /**
- * @file popover.tsx
+ * @file tooltip.tsx
  * @overview Sandbox of components.
  */
 
@@ -23,7 +23,7 @@ function TooltipExample(): JSX.Element {
     <div className="bg-white p-4 m-8">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger className="bg-black w-[47px] h-6 rounded-lg text-xs text-type-50">
+          <TooltipTrigger className="bg-black px-2 py-1 rounded-lg text-xs text-type-50 font-normal">
             Label
           </TooltipTrigger>
           <TooltipContent>

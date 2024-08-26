@@ -8,28 +8,21 @@
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  } from '@/components/dialog';
-  import { Input } from '@/components/input';
+  } from "@/components/dialog"
 
   <Dialog>
-    <DialogTrigger asChild>
-      <Button variant="outline">Dialog</Button>
-    </DialogTrigger>
-    <DialogContent className="">
+    <DialogTrigger>Open</DialogTrigger>
+    <DialogContent>
       <DialogHeader>
-        <DialogTitle>Title</DialogTitle>
-        <DialogDescription>Subtitle</DialogDescription>
+        <DialogTitle>Are you absolutely sure?</DialogTitle>
+        <DialogDescription>
+          This action cannot be undone. This will permanently delete your account
+          and remove your data from our servers.
+        /DialogDescription>
       </DialogHeader>
-      <Input id="name" className="w-[288px]" placeholder="Text" />
-      <DialogFooter className="flex float-right">
-        <Button type="submit" className="w-[60px]">
-          Done
-        </Button>
-      </DialogFooter>
     </DialogContent>
   </Dialog>
 
@@ -38,7 +31,6 @@
  * @npm i clsx
  * @npm i tailwind-merge
  * @npm i @radix-ui/react-dialog
- * @npx i tailfront elements input
  * @npm i @tabler/icons-react
  */
 
@@ -47,8 +39,6 @@ import { IconX } from '@tabler/icons-react';
 import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-
-const Dialog = DialogPrimitive.Root;
 
 const DialogTrigger = DialogPrimitive.Trigger;
 
@@ -63,10 +53,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={twMerge(
-      clsx(
-        'fixed inset-0 z-50 bg-container-950/20 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
-        className,
-      ),
+      clsx('fixed inset-0 z-50 bg-container-950/20', className),
     )}
     {...props}
   />
@@ -83,16 +70,15 @@ const DialogContent = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'fixed left-1/2 top-1/2 z-50 grid w-full max-w-[320px] -translate-x-1/2 -translate-y-1/2 gap-4 squircle bg-container-50 p-4 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg',
+          'fixed left-1/2 top-1/2 z-50 grid w-full max-w-[320px] -translate-x-1/2 -translate-y-1/2 gap-4 squircle bg-container-50 p-4',
           className,
         ),
       )}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-bacground transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focusLring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground text-type-950">
+      <DialogPrimitive.Close className="absolute right-4 top-4">
         <IconX className="size-5 text-type-950" />
-        <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -104,9 +90,7 @@ const DialogHeader: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => (
   <div
-    className={twMerge(
-      clsx('flex flex-col space-y-1 text-center sm:text-left', className),
-    )}
+    className={twMerge(clsx('flex flex-col space-y-1 text-left', className))}
     {...props}
   />
 );
@@ -117,12 +101,7 @@ const DialogFooter: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => (
   <div
-    className={twMerge(
-      clsx(
-        'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-        className,
-      ),
-    )}
+    className={twMerge(clsx('flex sm:flex-row sm:justify-end', className))}
     {...props}
   />
 );
@@ -136,7 +115,7 @@ const DialogTitle = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-base text-type-950 py-1 font-medium leading-none tracking-tight',
+        'text-base text-type-950 py-1 font-medium leading-none tracking-normal',
         className,
       ),
     )}
@@ -157,8 +136,9 @@ const DialogDescription = React.forwardRef<
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 
+const Dialog = DialogPrimitive.Root;
+
 export {
-  Dialog,
   DialogClose,
   DialogContent,
   DialogDescription,
@@ -166,4 +146,5 @@ export {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  Dialog,
 };

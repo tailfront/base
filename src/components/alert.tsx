@@ -3,6 +3,17 @@
  * @overview Displays a callout for user attention.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+
+  <Alert>
+    <Terminal className="h-4 w-4" />
+    <AlertTitle>Heads up!</AlertTitle>
+    <AlertDescription>
+      You can add components and dependencies to your app using the cli.
+    </AlertDescription>
+  </Alert>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -16,7 +27,7 @@ import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const alertVariants = cva(
-  'relative w-full h-[88px] rounded-lg border border-stroke-200 p-4 px-4 py-3 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-3 [&>svg]:text-foreground',
+  'relative w-full rounded-lg border border-stroke-200 px-4 py-3 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-1px] [&>svg]:absolute [&>svg]:left-3.5 [&>svg]:top-3.5 [&>svg]:text-foreground',
   {
     variants: {
       variant: {
@@ -54,7 +65,7 @@ const AlertTitle = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'flex items-center font-medium text-sm leading-none tracking-tight h-[20px]',
+        'flex items-center font-medium text-sm leading-5 tracking-tight',
         className,
       ),
     )}

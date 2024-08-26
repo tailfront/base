@@ -8,7 +8,7 @@
   Avatar,
   AvatarFallback,
   AvatarImage
-  } from "@/components/ui/avatar"
+  } from "@/components/avatar"
 
   <Avatar>
     <AvatarImage
@@ -23,7 +23,6 @@
 		@npm i @radix-ui/react-avatar
 		@npm i clsx
 		@npm i tailwind-merge
-		@npm i @tabler/icons-react
  */
 
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
@@ -68,7 +67,7 @@ const Avatar = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex bg-container-100  overflow-hidden rounded-full font-sans',
+        'relative flex bg-container-100 overflow-hidden rounded-full font-sans',
         className,
       ),
     )}
@@ -77,4 +76,4 @@ const Avatar = React.forwardRef<
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
-export { Avatar, AvatarFallback, AvatarImage };
+export { AvatarFallback, AvatarImage, Avatar };

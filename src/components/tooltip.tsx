@@ -1,8 +1,25 @@
 /**
- * @file popover.tsx
+ * @file tooltip.tsx
  * @overview A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  } from "@/components/tooltip"
+
+  <TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger>Hover</TooltipTrigger>
+      <TooltipContent>
+        <p>Add to library</p>
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -14,8 +31,6 @@ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-
-const TooltipProvider = TooltipPrimitive.Provider;
 
 const Tooltip = TooltipPrimitive.Root;
 
@@ -30,7 +45,7 @@ const TooltipContent = React.forwardRef<
     sideOffset={sideOffset}
     className={twMerge(
       clsx(
-        'z-50 overflow-hidden rounded-md squircle border bg-container-50 px-3 py-1.5 text-sm text-type-950 shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'overflow-hidden rounded-md squircle border bg-container-50 px-3 py-1.5 text-sm text-type-950',
         className,
       ),
     )}
@@ -38,5 +53,7 @@ const TooltipContent = React.forwardRef<
   />
 ));
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
+
+const TooltipProvider = TooltipPrimitive.Provider;
 
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger };

@@ -1,5 +1,5 @@
 /**
- * @file accordion.tsx
+ * @file dialog.tsx
  * @overview Sandbox of components.
  */
 
@@ -30,12 +30,12 @@ function DialogExample(): JSX.Element {
         <DialogTrigger asChild>
           <Button variant="outline">Dialog</Button>
         </DialogTrigger>
-        <DialogContent className="">
-          <DialogHeader className="w-[252px]">
+        <DialogContent>
+          <DialogHeader>
             <DialogTitle>Title</DialogTitle>
             <DialogDescription>Subtitle</DialogDescription>
           </DialogHeader>
-          <Input id="name" className="w-[288px]" placeholder="Text" />
+          <Input id="name" className="h-9" placeholder="Text" />
           <DialogFooter className="flex float-right">
             <Button type="submit" className="w-[60px]">
               Done

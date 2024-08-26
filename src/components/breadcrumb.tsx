@@ -11,7 +11,7 @@
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-  } from "@/components/ui/breadcrumb"
+  } from "@/components/breadcrumb"
 
   <Breadcrumb>
   <BreadcrumbList>
@@ -42,12 +42,6 @@ import { IconChevronRight, IconDots } from '@tabler/icons-react';
 import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-
-const Breadcrumb = React.forwardRef<
-  HTMLElement,
-  React.ComponentPropsWithoutRef<'nav'> & { separator?: React.ReactNode }
->(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />);
-Breadcrumb.displayName = 'Breadcrumb';
 
 const BreadcrumbList = React.forwardRef<
   HTMLOListElement,
@@ -91,7 +85,7 @@ const BreadcrumbLink = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'transition-colors tracking-wide font-normal text-type-400',
+          'transition-colors tracking-normal font-normal text-type-400',
           className,
         ),
       )}
@@ -124,7 +118,9 @@ const BreadcrumbSeparator: React.FC<React.ComponentProps<'li'>> = ({
   <li
     role="presentation"
     aria-hidden="true"
-    className={twMerge(clsx('[&>svg]:size-4 text-type-400', className))}
+    className={twMerge(
+      clsx('[&>svg]:size-4 font-normal text-type-400', className),
+    )}
     {...props}
   >
     {children ?? <IconChevronRight />}
@@ -147,12 +143,18 @@ const BreadcrumbEllipsis: React.FC<React.ComponentProps<'span'>> = ({
 );
 BreadcrumbEllipsis.displayName = 'BreadcrumbEllipsis';
 
+const Breadcrumb = React.forwardRef<
+  HTMLElement,
+  React.ComponentPropsWithoutRef<'nav'> & { separator?: React.ReactNode }
+>(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />);
+Breadcrumb.displayName = 'Breadcrumb';
+
 export {
-  Breadcrumb,
   BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
+  Breadcrumb,
 };

@@ -14,7 +14,7 @@
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  } from "@/components/ui/alert-dialog"
+  } from "@/components/alert-dialog"
 
   <AlertDialog>
     <AlertDialogTrigger>Open</AlertDialogTrigger>
@@ -46,7 +46,6 @@ import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { buttonVariants } from './button';
 
-const AlertDialog = AlertDialogPrimitive.Root;
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
 const AlertDialogPortal = AlertDialogPrimitive.Portal;
 
@@ -56,10 +55,7 @@ const AlertDialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Overlay
     className={twMerge(
-      clsx(
-        'fixed inset-0 z-50 bg-container-950/20 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
-        className,
-      ),
+      clsx('fixed inset-0 z-50 bg-container-950/20', className),
     )}
     {...props}
     ref={ref}
@@ -77,7 +73,7 @@ const AlertDialogContent = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'fixed left-1/2 top-1/2 z-50 grid w-full max-w-[480px] -translate-x-1/2 -translate-y-1/2 gap-6 squircle bg-container-50 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg',
+          'fixed left-1/2 max-w-md top-1/2 z-50 grid -translate-x-1/2 -translate-y-1/2 gap-6 squircle bg-container-50 p-6 rounded-lg',
           className,
         ),
       )}
@@ -106,10 +102,7 @@ const AlertDialogFooter: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => (
   <div
     className={twMerge(
-      clsx(
-        'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-        className,
-      ),
+      clsx('flex space-x-1 sm:justify-end sm:space-x-2', className),
     )}
     {...props}
   />
@@ -165,8 +158,9 @@ const AlertDialogCancel = React.forwardRef<
 ));
 AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;
 
+const AlertDialog = AlertDialogPrimitive.Root;
+
 export {
-  AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
@@ -175,4 +169,5 @@ export {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
+  AlertDialog,
 };

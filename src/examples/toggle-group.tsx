@@ -15,7 +15,6 @@ import { IconBold, IconItalic, IconUnderline } from '@tabler/icons-react';
  */
 function ToggleGroupExample(): JSX.Element {
   document.title = 'Toggle Group';
-
   return (
     <div className="bg-white p-4 m-4 flex flex-col gap-2">
       <ToggleGroup type="multiple">

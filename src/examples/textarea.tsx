@@ -1,5 +1,5 @@
 /**
- * @file
+ * @file textarea.tsx
  * @overview Sandbox of <components className=""></components>
  */
 
@@ -16,7 +16,7 @@ function TextareaExample(): JSX.Element {
   document.title = 'Textarea';
   return (
     <div className="m-8 p-4 bg-white w-[312px]">
-      <Textarea placeholder="Text" />
+      <Textarea rows={2} placeholder="Text" className="w-[282px]" />
     </div>
   );
 }

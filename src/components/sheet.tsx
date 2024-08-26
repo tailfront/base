@@ -11,7 +11,7 @@
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-  } from "@/components/ui/sheet"
+  } from "@/components/sheet"
 
   <Sheet>
     <SheetTrigger>Open</SheetTrigger>
@@ -42,7 +42,28 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-const Sheet = SheetPrimitive.Root;
+interface SheetContentProps
+  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
+    VariantProps<typeof sheetVariants> {}
+
+const sheetVariants = cva(
+  'fixed z-50 gap-4 bg-container-50 p-6 shadow-lg rounded-lg squircle',
+  {
+    variants: {
+      side: {
+        top: 'inset-x-0 top-0 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top',
+        bottom:
+          'inset-x-0 bottom-0 data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
+        left: 'inset-y-0 left-0 h-full w-3/4 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm',
+        right:
+          'inset-y-2 p-6 right-0 w-80 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
+      },
+    },
+    defaultVariants: {
+      side: 'right',
+    },
+  },
+);
 
 const SheetTrigger = SheetPrimitive.Trigger;
 
@@ -56,39 +77,13 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={twMerge(
-      clsx(
-        'fixed inset-0 z-50 bg-container-950/20 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
-        className,
-      ),
+      clsx('fixed inset-0 z-50 bg-container-950/20', className),
     )}
     {...props}
     ref={ref}
   />
 ));
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
-
-const sheetVariants = cva(
-  'fixed z-50 gap-4 bg-container-50 p-6 shadow-lg rounded-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 squircle',
-  {
-    variants: {
-      side: {
-        top: 'inset-x-0 top-0 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top',
-        bottom:
-          'inset-x-0 bottom-0 data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
-        left: 'inset-y-0 left-0 h-full w-3/4 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm',
-        right:
-          'inset-y-2 right-0 w-[320px] data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
-      },
-    },
-    defaultVariants: {
-      side: 'right',
-    },
-  },
-);
-
-interface SheetContentProps
-  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
@@ -102,7 +97,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-6 top-2 rounded-sm oopacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none text-type-950">
+      <SheetPrimitive.Close className="absolute right-6 top-2 rounded-sm oopacity-70 text-type-950">
         <IconX className="size-5" />
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
@@ -116,7 +111,7 @@ const SheetHeader: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => (
   <div
     className={twMerge(
-      clsx('flex flex-col space-y-1 text-center sm:text-left', className),
+      clsx('flex flex-col w-60 space-y-1 text-center sm:text-left', className),
       className,
     )}
     {...props}
@@ -163,6 +158,8 @@ const SheetDescription = React.forwardRef<
   />
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
+
+const Sheet = SheetPrimitive.Root;
 
 export {
   Sheet,

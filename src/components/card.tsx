@@ -11,21 +11,21 @@
   CardFooter,
   CardHeader,
   CardTitle,
-  } from '@/components/card';
+  } from "@/components/ui/card"
 
-	<Card className="w-[320px] h-[184px]">
+  <Card>
     <CardHeader>
-      <CardTitle>Title</CardTitle>
-      <CardDescription>Subtitle</CardDescription>
+      <CardTitle>Card Title</CardTitle>
+      <CardDescription>Card Description</CardDescription>
     </CardHeader>
     <CardContent>
-      <input className="w-[288px] h-9 border" />
+      <p>Card Content</p>
     </CardContent>
-    <CardFooter className="flex justify-between">
-      <Button variant={'outline'}>Cancel</Button>
-      <Button>Done</Button>
+    <CardFooter>
+      <p>Card Footer</p>
     </CardFooter>
   </Card>
+
 
  * @npm i react
  * @npm i --save-dev @types/react
@@ -57,7 +57,7 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'text-base font-medium text-type-950 flex items-center tracking-normal line-6',
+        'text-base font-medium text-type-950 flex items-center tracking-normal',
         className,
       ),
     )}

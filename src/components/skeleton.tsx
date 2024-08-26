@@ -1,6 +1,6 @@
 /**
  * @file skeleton.tsx
- * @overviewUse to show a placeholder while content is loading.
+ * @overview to show a placeholder while content is loading.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
 

@@ -19,14 +19,18 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
+interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
 const badgeVariants = cva(
-  'inline-flex items-center px-2 py-0.5 justify-center tracking-wide font-sans text-xs font-medium rounded-lg',
+  'inline-flex items-center px-2 py-0.5 justify-center tracking-tight font-sans text-xs font-medium rounded-lg leading-3',
   {
     variants: {
       variant: {
         default: 'bg-accent-800 text-type-50',
         secondary: 'bg-container-100 text-type-950',
-        outline: 'bg-container-50 !border border-stroke-200 text-type-950',
+        outline: 'bg-container-50 border border-stroke-200 text-type-950',
         destructive: 'bg-red-800 text-type-50',
       },
     },
@@ -35,10 +39,6 @@ const badgeVariants = cva(
     },
   },
 );
-
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
 
 const Badge: React.FC<BadgeProps> = ({ className, variant, ...props }) => {
   return (
@@ -49,4 +49,4 @@ const Badge: React.FC<BadgeProps> = ({ className, variant, ...props }) => {
   );
 };
 
-export { Badge, badgeVariants };
+export { type BadgeProps, badgeVariants, Badge };

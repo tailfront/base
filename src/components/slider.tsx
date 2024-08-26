@@ -3,6 +3,11 @@
  * @overview An input where the user selects a value from within a given range.
  * @license https://github.com/tailfront/elements/blob/main/LICENSE
  * @example
+
+  import { Slider } from "@/components/slider"
+
+  <Slider defaultValue={[20]} />
+
  * @npm i react
  * @npm i --save-dev @types/react
  * @npm i clsx
@@ -25,19 +30,13 @@ const Slider = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SliderPrimitive.Root
     ref={ref}
-    className={twMerge(
-      clsx(
-        'relative flex w-full touch-none select-none items-center',
-        className,
-      ),
-    )}
+    className={twMerge(clsx('relative flex w-full items-center', className))}
     {...props}
   >
-    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-container-100">
-      <SliderPrimitive.Range className="absolute h-full bg-accent-800" />
+    <SliderPrimitive.Track className="relative p-1 w-full overflow-hidden rounded-full bg-container-100">
+      <SliderPrimitive.Range className="absolute h-full bg-accent-800 -translate-y-1/2" />
     </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="size-6 rounded-full border border-stroke-200 bg-container-50 ring-offset-background transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 flex items-center justify-center">
-      {/* <IconMenu2 className="w-2.5 h-3 text-type-200 transform rotate-90" /> */}
+    <SliderPrimitive.Thumb className="size-6 rounded-full border border-stroke-200 bg-container-50 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 flex items-center justify-center">
       <svg
         width="10"
         height="12"
@@ -63,33 +62,4 @@ const Slider = React.forwardRef<
 ));
 Slider.displayName = SliderPrimitive.Root.displayName;
 
-// inline-flex
-// items-center
-// justify-center
-// whitespace-nowrap
-// rounded-lg
-// transition-colors
-// focus-visible:outline-none
-// focus-visible:ring-2
-// focus-visible:ring-ring
-// focus-visible:ring-offset-2
-// disabled:pointer-events-none
-// disabled:opacity-50
-// squircle
-// bg-accent-800
-// text-type-50
-// hover:bg-accent-700
-// focus:outline-none
-// focus:ring
-// focus:ring-accent-100
-// active:bg-accent-900
-// disabled:bg-accent-800
-// focus:bg-accent-800
-// h-10
-// w-[131px]
-// px-4
-// py-2
-// text-base
-// font-medium
-
-export { Slider };
+export { Slider, type SliderProps };

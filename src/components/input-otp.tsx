@@ -57,7 +57,7 @@ const InputOTPSlot = React.forwardRef<
       ref={ref}
       className={twMerge(
         clsx(
-          'relative flex size-9 bg-container-50 border-l last:border-r text-type-950 items-center justify-center border-y text-sm transition-all first:rounded-l-lg first:border-lg last:rounded-r-lg',
+          'relative flex size-9 px-3 py-2 bg-container-50 border-l last:border-r text-type-950 border-y text-sm first:rounded-l-lg last:rounded-r-lg',
           isActive && 'z-10 ring ring-accent-100',
           className,
         ),

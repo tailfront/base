@@ -162,7 +162,7 @@ function FormExample(): JSX.Element {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-3 w-[280px]"
+            className="space-y-4 w-[280px]"
           >
             <FormField
               control={form.control}
@@ -171,7 +171,11 @@ function FormExample(): JSX.Element {
                 <FormItem>
                   <FormLabel>Bio</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="About you" {...field} />
+                    <Textarea
+                      placeholder="About you"
+                      {...field}
+                      className="h-[72px]"
+                    />
                   </FormControl>
                   <FormDescription>
                     You can @mention other users and organizations.
@@ -197,14 +201,18 @@ function FormExample(): JSX.Element {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea placeholder="About you" {...field} />
+                    <Textarea
+                      placeholder="Enter your message"
+                      {...field}
+                      className="h-[72px]"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
             <Button type="submit" className="w-[280px]">
-              Submit
+              Send message
             </Button>
           </form>
         </Form>
@@ -214,7 +222,7 @@ function FormExample(): JSX.Element {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-3 w-[344px]"
+            className="space-y-4 w-[344px]"
           >
             <FormField
               control={form.control}
@@ -224,7 +232,7 @@ function FormExample(): JSX.Element {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Select>
-                      <SelectTrigger className="w-[344px]">
+                      <SelectTrigger>
                         <SelectValue placeholder="Select a verified email to display" />
                       </SelectTrigger>
                       <SelectContent>
@@ -253,10 +261,7 @@ function FormExample(): JSX.Element {
         </Form>
 
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-4 w-[344px]"
-          >
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
               name="email"
@@ -264,7 +269,7 @@ function FormExample(): JSX.Element {
                 <FormItem>
                   <FormControl>
                     <Select>
-                      <SelectTrigger className="w-[344px]">
+                      <SelectTrigger>
                         <SelectValue placeholder="Select a timezone" />
                       </SelectTrigger>
                       <SelectContent>
