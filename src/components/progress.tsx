@@ -28,14 +28,14 @@ const Progress = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'h-2 w-full overflow-hidden rounded-full bg-container-100',
+        'h-2 overflow-hidden rounded-full bg-container-100',
         className,
       ),
     )}
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className="h-full w-full bg-accent-800 transition-all rounded-full"
+      className="h-full bg-accent-800 transition-all rounded-full"
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />
   </ProgressPrimitive.Root>

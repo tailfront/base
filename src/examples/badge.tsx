@@ -15,7 +15,7 @@ import { Badge } from '@/components/badge';
 function BadgeExample(): JSX.Element {
   document.title = 'Badge';
   return (
-    <div className="fixed flex gap-4 m-8 bg-white p-4">
+    <div className="flex items-center gap-4 m-8 p-4 bg-white ">
       <Badge variant="default">Badge</Badge>
       <Badge variant="secondary">Badge</Badge>
       <Badge variant="outline">Badge</Badge>

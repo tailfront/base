@@ -18,11 +18,11 @@
     <AvatarFallback>CN</AvatarFallback>
   </Avatar>
 
-		@npm i react
-		@npm i --save-dev @types/react
-		@npm i @radix-ui/react-avatar
-		@npm i clsx
-		@npm i tailwind-merge
+ * @npm i react
+ * @npm i --save-dev @types/react
+ * @npm i @radix-ui/react-avatar
+ * @npm i clsx
+ * @npm i tailwind-merge
  */
 
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
@@ -36,7 +36,12 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={twMerge(clsx('h-full w-full', className))}
+    className={twMerge(
+      clsx(
+        'w-full',
+        className
+      )
+    )}
     {...props}
   />
 ));
@@ -50,7 +55,7 @@ const AvatarFallback = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'flex items-center justify-center p-2.5 pl-[11px] leading-5 rounded-full bg-container-100 text-type-400 text-sm',
+        'text-sm text-type-400 font-medium',
         className,
       ),
     )}
@@ -67,7 +72,8 @@ const Avatar = React.forwardRef<
     ref={ref}
     className={twMerge(
       clsx(
-        'relative flex bg-container-100 overflow-hidden rounded-full font-sans',
+        'flex justify-center items-center bg-container-100 aspect-square rounded-full overflow-hidden',
+        'w-10', // Default size
         className,
       ),
     )}

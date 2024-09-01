@@ -30,8 +30,8 @@ import { IconChevronDown } from '@tabler/icons-react';
 function BreadcrumbExample(): JSX.Element {
   document.title = 'Breadcrumb';
   return (
-    <div className="m-8 flex flex-col gap-4">
-      <div className="w-[290px]">
+    <div>
+      <div>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -62,7 +62,7 @@ function BreadcrumbExample(): JSX.Element {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="w-[258px]">
+      <div>
         <Breadcrumb>
           <BreadcrumbList className="w-88">
             <BreadcrumbItem>

@@ -37,15 +37,15 @@ module.exports = {
     ringOffsetColor: ({ theme }) => theme('ringColor'),
     borderRadius: {
       // px for squircle
-      none: '0px',
-      sm: '2px',
+      none:    '0px',
+      sm:      '2px',
       DEFAULT: '4px',
-      md: '6px',
-      lg: '8px',
-      xl: '10px',
-      '2xl': '16px',
-      '3xl': '24px',
-      full: '9999px',
+      md:      '6px',
+      lg:      '8px',
+      xl:      '10px',
+      '2xl':   '16px',
+      '3xl':   '24px',
+      full:    '9999px',
     },
     borderWidth: {
       // Duplicate to persist

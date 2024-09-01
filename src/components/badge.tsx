@@ -24,13 +24,13 @@ interface BadgeProps
     VariantProps<typeof badgeVariants> {}
 
 const badgeVariants = cva(
-  'inline-flex items-center px-2 py-0.5 justify-center tracking-tight font-sans text-xs font-medium rounded-lg leading-3',
+  'text-xs font-medium px-2 py-1 leading-3 rounded-lg max-h-5',
   {
     variants: {
       variant: {
-        default: 'bg-accent-800 text-type-50',
-        secondary: 'bg-container-100 text-type-950',
-        outline: 'bg-container-50 border border-stroke-200 text-type-950',
+        default:     'bg-accent-800 text-type-50',
+        secondary:   'bg-container-100 text-type-950',
+        outline:     'bg-container-50 border border-stroke-200 box-border text-type-950',
         destructive: 'bg-red-800 text-type-50',
       },
     },
